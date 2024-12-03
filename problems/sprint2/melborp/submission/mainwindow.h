@@ -15,8 +15,13 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
+    QString Melborp(const QString& input);
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow* ui;
+    QString result = "";
 };
 #endif  // MAINWINDOW_H
