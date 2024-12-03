@@ -11,3 +11,18 @@ MainWindow::MainWindow(QWidget* parent)
 MainWindow::~MainWindow() {
     delete ui;
 }
+
+void MainWindow::on_lineEdit_textChanged(const QString &arg1)
+{
+    QString a = arg1;
+    QString b = "Введите имя";
+
+    if (!a.isEmpty()) {
+        b = "Привет из Qt, " + a + "!";
+    } else {
+        b = "Введите имя";
+    }
+
+    ui->lbl_result->setText(b);
+}
+
